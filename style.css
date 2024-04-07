@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif; /* Change font family as needed */
+  background-color: #f4f4f4;
+  margin: 10px;
+  padding: 0;
+}
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* Adjust grid columns as per your requirement */
+  gap: 20px; /* Adjust gap between grid items */
+}
+
+.book-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensure the image doesn't overflow */
+}
+
+.book-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.book-author {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.book-cover {
+  width: 80%;
+  height: 80%; /* Set fixed height for proper resolution */
+  border-radius: 5px;
+  object-fit: cover; /* Scale the image to cover the entire container */
+}
+
+/* Placeholder image style */
+.placeholder-image {
+  width: 100%;
+  height: auto;
+}
+
+.search-container {
+  margin-bottom: 20px; /* Adjust margin bottom as needed */
+}
+
+.search-input {
+  padding: 10px;
+  width: 50%;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
