@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Details</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body ng-app="bookApp">
     <div ng-controller="BookDetailsController">
       <div>
+        <a href="#!banana">Banana</a>
+        <a href="#!tomato">Tomato</a>
         <h1>Book Inventory</h1>
       </div>
+      <div ng-view></div>
       <!-- Search input -->
       <div class="sort-dropdown">
         <label for="ratingSort">Sort by Rating:</label>
@@ -58,7 +62,7 @@
     <!-- Information Dialog Directive -->
     <script>
       angular
-        .module("bookApp", [])
+        .module("bookApp", ["ngRoute"])
         .controller("BookDetailsController", [
           "$scope",
           "$http",
@@ -115,6 +119,21 @@
               });
           },
         ])
+        .config(function ($routeProvider) {
+          $routeProvider
+            .when("/", {
+              template:
+                "<h1>Main</h1><p>Click on the links to change this content</p>",
+            })
+            .when("/banana", {
+              template:
+                "<h1>Banana</h1><p>Bananas contain around 75% water.</p>",
+            })
+            .when("/tomato", {
+              template:
+                "<h1>Tomato</h1><p>Tomatoes contain around 95% water.</p>",
+            });
+        })
 
         .directive("bookInfoDialog", function () {
           return {
