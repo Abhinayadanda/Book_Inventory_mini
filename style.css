@@ -32,8 +32,8 @@ body {
 }
 
 .book-cover {
-  width: 80%;
-  height: 80%; /* Set fixed height for proper resolution */
+  width: 100%;
+  height: 400px; /* Set fixed height for proper resolution */
   border-radius: 5px;
   object-fit: cover; /* Scale the image to cover the entire container */
 }
