@@ -10,10 +10,10 @@
   </head>
   <body ng-app="bookApp">
     <div ng-controller="BookDetailsController">
-      <div>
-        <a href="#!favorite">Favorites</a>
+      <div class="nav-container">
+        <a href="#!"><h1>Book Inventory</h1></a>
+        <a href="#!favorite">Favourites</a>
         <a href="#!wishlist">WishList</a>
-        <h1>Book Inventory</h1>
       </div>
       <div ng-view></div>
       <!-- Search input -->
@@ -32,14 +32,17 @@
           <option value="1">Below 1.5</option>
         </select>
       </div>
-      <div class="search-container">
-        <input
-          type="text"
-          ng-model="searchText"
-          placeholder="Search for a book..."
-          class="search-input"
-        />
-      </div>
+      <br />
+      <center>
+        <div class="search-container">
+          <input
+            type="text"
+            ng-model="searchText"
+            placeholder="Search for a book..."
+            class="search-input"
+          />
+        </div>
+      </center>
       <div class="book-grid">
         <div
           ng-repeat="book in sortedBooks | filter: searchText"

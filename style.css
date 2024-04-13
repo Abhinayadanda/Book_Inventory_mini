@@ -1,9 +1,42 @@
 body {
   font-family: Arial, sans-serif; /* Change font family as needed */
   background-color: #f4f4f4;
-  margin: 10px;
+  /* margin: 10px; */
   padding: 0;
 }
+/* Container */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #636161; /* Change background color as needed */
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  /* Adjust margin bottom as needed */
+}
+
+/* Navigation Links */
+.nav-container a {
+  color: #fff; /* Link text color */
+  text-decoration: none;
+  margin-right: 0px; /* Adjust spacing between links */
+  font-size: 20px; /* Adjust font size as needed */
+  transition: color 0.3s ease; /* Smooth transition for link color */
+}
+
+.nav-container a:hover {
+  color: #ffd700; /* Change link color on hover */
+  font-size: large;
+}
+
+/* Title */
+.nav-container h1 {
+  color: #fff; /* Title text color */
+  margin: 0;
+  font-size: 30px; /* Adjust font size as needed */
+}
+
 .book-grid {
   display: grid;
   grid-template-columns: repeat(
@@ -48,10 +81,33 @@ body {
   margin-bottom: 20px; /* Adjust margin bottom as needed */
 }
 
+/* Search Input */
 .search-input {
   padding: 10px;
   width: 50%;
-  font-size: 16px;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+/* Sort Dropdown Container */
+.sort-dropdown {
+  margin-bottom: 20px; /* Adjust margin bottom as needed */
+}
+
+/* Label for Sort Dropdown */
+.sort-dropdown label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+/* Select Dropdown */
+.sort-dropdown select {
+  padding: 10px;
+  font-size: 16px; /* Adjust font size as needed */
+  width: 30%;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
